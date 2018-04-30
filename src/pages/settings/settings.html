@@ -1,0 +1,50 @@
+<ion-header>
+    <ion-navbar color="secondary">
+        <ion-title>
+            Settings
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (submit)="setDefaults()">
+        <ion-list>
+            <ion-item>
+                <ion-label fixed>Category</ion-label>
+                <ion-select [(ngModel)]="category" name="category">
+                    <ion-option value="AsianCuties">AsianCuties</ion-option>
+                    <ion-option value="cosplay">Cosplay</ion-option>
+                    <ion-option value="cosplaygirls">Cosplaygirls</ion-option>
+                    <ion-option value="gaming">Gaming</ion-option>
+                    <ion-option value="FitAndNatural">FitAndNatural</ion-option>
+                    <ion-option value="funny">Funny</ion-option>
+                    <ion-option value="gentlemanboners">Gentlemanboners</ion-option>
+                    <ion-option value="goddesses">Goddesses</ion-option>
+                    <ion-option value="mildlyinteresting">Mildlyinteresting</ion-option>
+                    <ion-option value="music">Music</ion-option>
+                    <ion-option value="news">News</ion-option>
+                    <ion-option value="Offensive_Wallpapers">Offensive Wallpapers</ion-option>
+                    <ion-option value="Pareidolia">Pareidolia</ion-option>
+                    <ion-option value="photoshopbattles">Photoshopbattles</ion-option>
+                    <ion-option value="pic">Pic</ion-option>
+                    <ion-option value="pics">Pics</ion-option>
+                    <ion-option value="wallpaper">Wallpaper</ion-option>
+                    <ion-option value="wallpapers">Wallpapers</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <ion-item>
+                <ion-label fixed>Limit</ion-label>
+                <ion-select [(ngModel)]="limit" name="limit">
+                    <ion-option value="5">5</ion-option>
+                    <ion-option value="10">10</ion-option>
+                    <ion-option value="15">15</ion-option>
+                    <ion-option value="20">20</ion-option>
+                    <ion-option value="25">25</ion-option>
+                </ion-select>
+            </ion-item>
+
+            <button ion-button type="submit" block>Save Changes</button>
+        </ion-list>
+    </form>
+</ion-content>
